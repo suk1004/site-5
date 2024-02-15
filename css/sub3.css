@@ -1,0 +1,379 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+html{scroll-behavior: smooth;}
+
+body{color: #222;}
+
+.wrap {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 160px;
+}
+/*---------- section style ----------*/
+section{background-color: white;}
+.section_in{
+	width:1300px;
+	background:#fff;
+	margin:0 auto;	
+  padding-top: 50px;
+}
+/* 위치 */
+.location{
+  font-size: 14px;
+  color: #999;
+  text-align: right;
+  margin-bottom: 80px;
+}
+.location em{
+  font-style:normal ;
+  color: #fdb460;
+}
+.section_in h3{
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*sub-  mouse */
+.mouseBox {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+}
+
+.awtxt {
+  display: block;
+  text-align: center;
+  margin-bottom: 7px;
+  color: #FF9A23;
+}
+
+
+.mouseBox .mouse {
+  width: 32px;
+  height: 50px;
+  border: 4px solid #FF9A23;
+  border-radius: 30px;
+  position: relative;
+  margin: auto;
+}
+
+.mouseBox .mouse span {
+  width: 5px;
+  height: 14px;
+  background: #FF9A23;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  animation: mouse 0.8s linear infinite;
+}
+
+.arrows_down {
+  text-align: center;
+}
+
+
+.arrows_down .aw1,
+.arrows_down .aw2 {
+  color: #FF9A23;
+  font-size: 55px;
+  position: absolute;
+  animation: aw 2s linear infinite alternate;
+}
+
+.arrows_down .aw1 {
+  top: 50px;
+  left: -10px;
+  animation-delay: 0.8s;
+}
+
+.arrows_down .aw2 {
+  top: 70px;
+  left: -10px;
+  animation-delay: 1.2s;
+
+}
+
+/* 마우스 휠 animation */
+@keyframes mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+
+/* 화살표 animation */
+
+@keyframes aw {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+/* marketing1 */
+/* marketing1- 비주얼 */
+#marketing1_main{
+	width:100%;
+	height:600px;
+  position: relative;
+  top: 0%;
+}
+
+#marketing1_main .marketing1_main_img{
+  background: url(../img/marketing1_main_img.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+#marketing1_main .marketing1_main_img::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+	background-size:cover;
+  z-index: -11;
+}
+
+
+.marketing1_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.marketing1_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.marketing1_caption h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+/* __marketing content1 */
+.marketing1-1{
+  position: relative;
+  width: 1300px;
+  height: 700px;
+}
+
+.marketing1-1 h3{
+  font-size: 32px;
+  text-align: left;
+  color: #222;
+  margin-bottom: 30px;
+}
+.marketing1-1_img{
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background: url(../img/marketing1-1_img.jpg)no-repeat left top;
+  border-radius: 0 100px 0 0;
+  width: 1050px;
+  height: 500px;
+}
+.marketing1-1_img_orange{
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background-color: rgba(181, 122, 53, 0.5);
+  border-radius: 0 100px 0 0;
+  width: 1050px;
+  height: 500px;
+}
+
+.marketing1_banner{  
+	position:relative;
+	width:1300px;
+	height:500px;
+}
+.marketing1_banner .marketing1_ban{
+	width:1160px; 
+	height:500px;
+	overflow:hidden;
+	position: absolute;
+	left: 50px;
+  padding: 0 10px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.marketing1_banner .marketing1_ban ul{
+	display: flex;
+	position:relative;
+}
+.marketing1_banner .marketing1_ban ul li{
+	margin-right:30px;
+	width:360px;   
+	height:450px;
+  border-radius: 0 20px 0 20px;
+  box-shadow: 0 4px 10px #333;
+}
+.marketing1_banner .marketing1_ban ul li img{
+	margin-right:30px;
+	width:360px;   
+	height:450px;  
+  border-radius: 0 20px 0 20px;
+}
+
+/* 사진속 글 */
+.mark1-1_ban_in{
+  position: absolute;
+  bottom: 0;
+  width: 360px;
+  height: 150px;
+  background: white;
+  border-radius: 0 0 0 20px;
+}
+.mark1-1_ban_in h5{
+  font-size: 24px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.mark1-1_ban_in span{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #777;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 160px;
+
+}
+.mark1-1_ban_in .alink{
+  display: inline-block;
+  border: 1px solid #FF9A23;
+  width: 70px;
+  height: 30px;
+  border-radius: 0 10px 0 10px;
+  font-size: 24px;
+  color: #FF9A23;
+  background: transparent;
+}
+.mark1-1_ban_in .alink i{
+  line-height: 30px;
+  font-size: 25px;
+  padding-left: 23px;
+}
+
+/*좌우버튼 */
+.marketing_ban_left .material-symbols-outlined{
+	position:absolute;
+	top:200px;
+  font-size: 72px;
+  color: #FF9A23;
+	cursor:pointer;
+}
+.marketing_ban_right .material-symbols-outlined{
+	position:absolute;
+	top:200px;
+	right:90px;
+  font-size: 72px;
+  color: #FF9A23;
+	cursor:pointer;
+}
+.marketing_ban_btn span{
+	display:inline-block;
+	width:17px;
+	height:27px;	
+}
+/* 전체보기 버튼 */
+.marketing1-1 .marketing1-1_last_btn{
+  display: inline-block;
+  width: 160px;
+  height: 50px;
+  background: #F7701E;
+  border: none;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  display: block;
+  font-size: 18px;
+  margin-top:40px;
+  border-radius: 0 20px 0 20px;
+}
+
+/*_______marketing1-2_________ */
+
+.marketing1-2 h3{
+  font-size: 32px;
+  color: #333;
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+/*gellery-------------------------------------------------------------- */
+#marketing1-2_gallery{ 
+	width:1300px;
+	height:1000px;
+	position:relative;
+	margin: auto;
+}
+
+.marketing1-2_largeImg li{
+	display:none;
+	position:absolute;
+  width: 1300px;
+  height: 788px;
+  overflow: hidden;
+}
+
+.marketing1-2_largeImg li:first-child{display:block;}
+
+.marketing1-2_thumbs{
+	position:absolute;
+	left:50%;	
+	bottom: 40px;
+  transform: translateX(-50%);
+	display: flex;	
+	justify-content: space-between;
+	width: 100%;
+	
+}
+.marketing1-2_thumbs li{transition: 0.35s;}
+.marketing1-2_thumbs li:hover{filter: brightness(60%);}
+.marketing1-2_thumbs li:first-child{opacity:1;}
+.marketing1-2_thumbs li a img{
+	width: 300px;
+	height: 200px;
+}
+
+.marketing1-2_largeImg li video{width: 1300px;}

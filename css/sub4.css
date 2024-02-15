@@ -1,0 +1,522 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+.job1-1 {
+  margin: 0 auto;
+  width: 1300px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #222;
+}
+
+/*---------- section style ----------*/
+section {
+  background-color: white;
+}
+
+.section_in {
+  width: 1300px;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* 위치 */
+.location {
+  font-size: 14px;
+  color: #999;
+  text-align: right;
+  margin-bottom: 80px;
+}
+
+.location em {
+  font-style: normal;
+  color: #fdb460;
+}
+
+.section_in h3 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*sub-  mouse */
+
+.mouseBox {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+}
+
+.awtxt {
+  display: block;
+  text-align: center;
+  margin-bottom: 7px;
+  color: #FF9A23;
+}
+
+
+.mouseBox .mouse {
+  width: 32px;
+  height: 50px;
+  border: 4px solid #FF9A23;
+  border-radius: 30px;
+  position: relative;
+  margin: auto;
+}
+
+.mouseBox .mouse span {
+  width: 5px;
+  height: 14px;
+  background: #FF9A23;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  animation: mouse 0.8s linear infinite;
+}
+
+.arrows_down {
+  text-align: center;
+}
+
+
+.arrows_down .aw1,
+.arrows_down .aw2 {
+  color: #FF9A23;
+  font-size: 55px;
+  position: absolute;
+  animation: aw 2s linear infinite alternate;
+}
+
+.arrows_down .aw1 {
+  top: 80px;
+  left: 24px;
+  animation-delay: 0.8s;
+}
+
+.arrows_down .aw2 {
+  top: 100px;
+  left: 24px;
+  animation-delay: 1.2s;
+
+}
+
+/* 마우스 휠 animation */
+@keyframes mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+
+/* 화살표 animation */
+
+@keyframes aw {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* jo1  */
+#jop1_main {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+}
+
+#jop1_main .jop1_main_img {
+  background: url(../img/job1_main.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#jop1_main .about3_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.jop1_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.jop1_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.jop1_caption h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* job1-1 컨텐츠 */
+
+.about3_container{
+  width: 100%;
+}
+
+.job1-1 h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.tab {
+  display: flex;
+  justify-content: left;
+}
+
+.tab li {
+  color: #F7701E;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  border-radius: 30px;
+  width: 100px;
+  height: 40px;
+  padding: 0 5px;
+  cursor: pointer;
+  border: 1px solid #F7701E;
+  margin-right: 10px;
+  padding: 3px 5px;
+}
+
+.tab li.active {
+  display: block;
+  width: 100px;
+  height: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  background-color: #F7701E;
+  color: white;
+}
+
+.tabContents {
+  clear: both;
+  margin-top: 100px;
+  width: 1300px;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.tabContents div ul {
+  display: flex;
+}
+
+.tabContents div ul li {
+  margin-right: 30px;
+}
+
+/* 이미지와 글의 부모인 a 태그 */
+.menu {
+  width: 270px;
+  height: 270px;
+  background-color: #F7701E;
+  display: inline-block;
+  position: relative;
+}
+
+/* 이미지 */
+.tabContents div ul li img {
+  width: 270px;
+  height: 270px;
+  margin-right: 30px;
+  transition: 0.35s;
+  position: relative;
+}
+
+.tabContents div ul li a:hover img {
+  animation: long 0.25s linear alternate forwards;
+  filter: brightness(60%);
+}
+
+@keyframes long {
+  0% {
+    height: 270px;
+  }
+
+  50% {
+    height: 280px;
+
+  }
+
+  100% {
+    height: 290px;
+  }
+}
+
+.tabContents .tab_sub {
+  display: none;
+}
+
+.tabContents div.active {
+  display: block;
+}
+
+/* _______________텍스트________________ */
+.tab_name {
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.tab_name_long {
+  top: 40%;
+  left: 30%;
+}
+
+.material-symbols-outlined {
+  color: #f85f00;
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  opacity: 0;
+}
+
+.tabContents div ul li a:hover .material-symbols-outlined {
+  animation: click 0.35s linear alternate forwards;
+}
+
+@keyframes click {
+  0% {opacity: 0%;}
+
+  50% {opacity: 50%;}
+
+  100% {opacity: 100%;}
+}
+
+/* ______________모달창______________ */
+
+/* POPUP BOX */
+.pop {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow: auto;
+}
+
+/*각 목록별 나오는 모달팝업 내용 나오는 부분*/
+.c1 {
+  margin: 50px auto;
+  padding: 50px 70px;
+  width: 1000px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.c1 h2 {
+  font-size: 20px;
+  color: #F7701E;
+  margin-bottom: 8px;
+}
+
+.c1 h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+
+.close {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  color: #fff;
+  z-index: 5000;
+  display: inline-block;
+}
+
+.close i {
+  font-size: 30px;
+}
+
+/* ____________jon1-2______________ */
+.job1_contnet2 h4{
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.banner {
+  position: relative;
+  width: 1300px;
+  height: 350px;
+  margin: auto;
+}
+
+.banner .ban {
+  width: 1300px;
+  height: 350px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.banner .ban ul {
+  display: flex;
+  position: relative;
+}
+
+.banner .ban ul li {
+  margin-right: 30px;
+  width: 300px;
+  height: 300px;
+}
+
+.banner .ban ul li img {
+  width: 300px;
+  height: 300px;
+}
+
+/*좌우버튼*/
+.ban_left {
+  position: absolute;
+  bottom: 0px;
+  left: 450px;
+  cursor: pointer;
+}
+
+.ban_right {
+  position: absolute;
+  bottom: 0px;
+  right: 600px;
+  cursor: pointer;
+}
+
+.ban_btn span {
+  display: inline-block;
+  width: 17px;
+  height: 27px;
+}
+
+.ban_btn .ban_left {
+  background: url(../img/job_arrow_left.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.ban_btn .ban_right {
+  background: url(../img/job_arrow_right.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+/* ____________jon1-3______________ */
+.job1-3{
+  width: 100%;
+  height: 400px;
+  margin-top: 150px;
+  margin-bottom: 0;
+}
+.job1_contnet3{
+  height: 1300px;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+}
+
+.job1-3-img{
+  width: 100%;
+  height: 400px;
+  background: url(../img/job1-3content.jpg) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+}
+.job1-3-img::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: #94491B;
+  opacity: 0.7;
+}
+
+.job1-3-text{
+  z-index: 10;
+  text-align: center;
+  z-index: 10;
+  transform: translateY(100px);
+}
+
+.job1_contnet3 p{
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: white;
+}
+
+.job1_contnet3 button{
+  border: 2px solid white;
+  color: white;
+  border-radius: 0 15px 0 15px;
+  padding: 15px 20px;
+  background: transparent;
+  font-size: 20px;
+  font-weight:500;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.job1_contnet3 button:hover{
+  background-color: white;
+  color: #94491B;
+}

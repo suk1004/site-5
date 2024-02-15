@@ -1,0 +1,687 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+.wrap {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 160px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #222;
+}
+
+/*---------- section style ----------*/
+section {
+  background-color: white;
+}
+
+.section_in {
+  width: 1300px;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* 위치 */
+.location {
+  font-size: 14px;
+  color: #999;
+  text-align: right;
+  margin-bottom: 80px;
+}
+
+.location em {
+  font-style: normal;
+  color: #fdb460;
+}
+
+.section_in h3 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*sub-  mouse */
+.mouseBox {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+}
+
+.awtxt {
+  display: block;
+  text-align: center;
+  margin-bottom: 7px;
+  color: #FF9A23;
+}
+
+
+.mouseBox .mouse {
+  width: 32px;
+  height: 50px;
+  border: 4px solid #FF9A23;
+  border-radius: 30px;
+  position: relative;
+  margin: auto;
+}
+
+.mouseBox .mouse span {
+  width: 5px;
+  height: 14px;
+  background: #FF9A23;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  animation: mouse 0.8s linear infinite;
+}
+
+.arrows_down {
+  text-align: center;
+}
+
+
+.arrows_down .aw1,
+.arrows_down .aw2 {
+  color: #FF9A23;
+  font-size: 55px;
+  position: absolute;
+  animation: aw 2s linear infinite alternate;
+}
+
+.arrows_down .aw1 {
+  top: 80px;
+  left: 24px;
+  animation-delay: 0.8s;
+}
+
+.arrows_down .aw2 {
+  top: 100px;
+  left: 24px;
+  animation-delay: 1.2s;
+
+}
+
+/* 마우스 휠 animation */
+@keyframes mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+
+/* 화살표 animation */
+
+@keyframes aw {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* about1- 회사소개 subpage */
+/* about1- 비주얼 */
+#about1_main {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+}
+
+#about1_main .about1_main_img {
+  background: url(../img/about1_main_img.png) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#about1_main .about1_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.about1_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.about1_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+}
+
+/*about1 - impormation1  성장의 가치*/
+.imformation1 {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 200px;
+  padding-top: 50px;
+}
+
+/* imformation1-1 text */
+.imfor1_text h4 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.imformation1 h5 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  line-height: 37px;
+}
+
+/* imformation1-1 img */
+.imfor1_img {
+  position: relative;
+}
+
+.imfor1_img img:nth-child(1) {
+  width: 420px;
+  height: 620px;
+  border-radius: 0 20px 0 20px;
+  box-shadow: 0 0 20px #555;
+  transition: 0.35s;
+}
+
+.imfor1_img img:nth-child(2) {
+  width: 580px;
+  height: 350px;
+  border-radius: 0 20px 0 20px;
+  position: absolute;
+  top: 60%;
+  right: 40%;
+  z-index: 5;
+  box-shadow: 0 0 20px #555;
+  transition: 0.35s;
+}
+
+.imfor1_img img:hover {
+  transform: scale(1.1);
+}
+
+
+/*about1 - impormation2  기업현황*/
+.imformation2 {
+  margin-top: 50px;
+  position: relative;
+}
+
+.imformation2 h4 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.imformation2>span {
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border-radius: 0 50px 0 50px;
+}
+
+.imformation2 img {
+  width: 100%;
+  height: 550px;
+  border-radius: 0 50px 0 50px;
+}
+
+/* impormaiton2 -애니메이션 */
+.imfor2_text {
+  padding: 20px;
+  display: grid;
+  grid-column-gap: 150px;
+  grid-row-gap: 80px;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+.imfor2_text li {
+  text-align: center;
+}
+
+.imfor2_text .counter {
+  padding-right: 5px;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+
+.imfor2_text>li:first-of-type>.counter:nth-of-type(2) {
+  padding-right: 0;
+}
+
+.conter_text {
+  color: white;
+}
+
+.imfor2_text p {
+  font-size: 24px;
+  color: white;
+}
+
+/* icon */
+.material-symbols-outlined {
+  font-size: 80px;
+  color: white;
+}
+
+.imfor2_text i {
+  font-size: 60px;
+  color: white;
+  padding: 10px;
+}
+
+/* impormation3 미래의 가치 */
+.imformation3 h4 {
+  font-size: 32px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+.imformation3 p {
+  font-weight: 800;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/*imfor3 -원 */
+.imfor3_circle {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.imfor3_circle .circle_in {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px #777;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.circle_in:hover {
+  animation: border 0.35s linear alternate forwards;
+}
+
+@keyframes border {
+  0% {
+    border: none;
+  }
+
+  25% {
+    border: 3px solid #FF9A23;
+  }
+
+  50% {
+    border: 5px solid #FF9A23;
+  }
+
+  75% {
+    border: 7px solid #FF9A23;
+  }
+
+  100% {
+    border: 10px solid #FF9A23;
+  }
+}
+
+/*imfor3 - 아이콘 */
+.in1:hover .imfor3_icon1 {
+  color: #F7701E;
+}
+
+.in2:hover .imfor3_icon2 {
+  color: #F7701E;
+}
+
+.in3:hover .imfor3_icon3 {
+  color: #F7701E;
+}
+
+.in1 .imfor3_icon1 {
+  font-size: 100px;
+  font-weight: 900;
+  color: #777;
+  position: absolute;
+  z-index: 5;
+  top: 21%;
+  left: 12.8%;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.in2 .imfor3_icon2 {
+  position: absolute;
+  z-index: 5;
+  top: 22%;
+  left: 46.1%;
+  color: #777;
+  font-size: 100px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.in3 .imfor3_icon3 {
+  position: absolute;
+  z-index: 5;
+  top: 21%;
+  left: 80%;
+  color: #777;
+  font-size: 100px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+/*imfor3 -원 밑 단어 */
+.circle_bottom {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.imformation3>span:first-of-type {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  line-height: 37px;
+  padding-bottom: 50px;
+}
+
+/* _____________________________________ */
+
+/* about2- 회사소개 Subpage */
+/* about2- 비주얼 */
+#about2_main {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+  /* border: 1px solid red; */
+}
+
+#about2_main .about2_main_img {
+  background: url(../img/about2_main.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#about2_main .about2_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.about2_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.about2_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+}
+
+/* about2- text */
+.section_in .line {
+  display: block;
+  width: 3px;
+  height: 50px;
+  background-color: #222;
+  left: 50%;
+  margin: 20px auto 50px;
+}
+
+.section_in p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.section_in p strong {
+  color: #F7701E;
+}
+
+/* _____________________________________ */
+
+/* about3- 계열사 소개 Subpage */
+/* about3-비주얼 */
+#about3_main {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+}
+
+#about3_main .about3_main_img {
+  background: url(../img/about3_main_img.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#about3_main .about3_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.about3_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.about3_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.about3_caption h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* about3- 컨텐츠 */
+
+.about3_container:last-of-type {
+  margin-bottom: 50px;
+}
+
+.about3_content ul {
+  display: flex;
+  margin: 0 auto;
+}
+
+.about3_content ul li {
+  width: 250px;
+  height: 250px;
+  border-radius: 0 30px 0 30px;
+}
+
+
+.about3_content ul li {
+  position: relative;
+  margin-top: 50px;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.about3_content ul li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5s ease;
+}
+
+.about3_content ul li:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about3_content ul li img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 0;
+}
+
+/* 회사이름 */
+.aboout3_title {
+  position: absolute;
+  width: 500px;
+  left: -50px;
+  top: 100px;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eee;
+  z-index: 1;
+  transition: top .5s ease;
+  cursor: pointer;
+}
+
+.about3_content ul li:hover .aboout3_title {
+  top: 60px;
+}
+
+/* 업태 */
+.about3_title_down {
+  position: absolute;
+  width: 500px;
+  left: -50px;
+  top: 160px;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FC8E0E;
+  z-index: 1;
+  display: block;
+  transition: top .5s ease;
+  cursor: pointer;
+}
+
+.about3_content ul li:hover .about3_title_down {
+  top: 120px;
+}
+
+
+.button {
+  position: absolute;
+  width: 500px;
+  left: -50px;
+  top: 200px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.35s ease;
+}
+
+.button a {
+  width: 100px;
+  padding: 10px 35px;
+  text-align: center;
+  color: white;
+  background: rgba(252, 142, 14, 0.5);
+  border: solid 1px #FF9A23;
+  border-radius: 0 20px 0 20px;
+  z-index: 1;
+}
+
+.about3_content ul li:hover .button {
+  opacity: 1;
+}

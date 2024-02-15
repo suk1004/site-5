@@ -1,0 +1,530 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #222;
+}
+
+.wrap {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 160px;
+}
+/*---------- section style ----------*/
+section {
+  background-color: white;
+}
+
+.section_in {
+  width: 1300px;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* 위치 */
+.location {
+  font-size: 14px;
+  color: #999;
+  text-align: right;
+  margin-bottom: 80px;
+}
+
+.location em {
+  font-style: normal;
+  color: #fdb460;
+}
+
+.section_in h3 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*sub-  mouse */
+
+.mouseBox {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+}
+
+.awtxt {
+  display: block;
+  text-align: center;
+  margin-bottom: 7px;
+  color: #FF9A23;
+}
+
+
+.mouseBox .mouse {
+  width: 32px;
+  height: 50px;
+  border: 4px solid #FF9A23;
+  border-radius: 30px;
+  position: relative;
+  margin: auto;
+}
+
+.mouseBox .mouse span {
+  width: 5px;
+  height: 14px;
+  background: #FF9A23;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  animation: mouse 0.8s linear infinite;
+}
+
+.arrows_down {
+  text-align: center;
+}
+
+
+.arrows_down .aw1,
+.arrows_down .aw2 {
+  color: #FF9A23;
+  font-size: 55px;
+  position: absolute;
+  animation: aw 2s linear infinite alternate;
+}
+
+.arrows_down .aw1 {
+  top: 80px;
+  left: 24px;
+  animation-delay: 0.8s;
+}
+
+.arrows_down .aw2 {
+  top: 100px;
+  left: 24px;
+  animation-delay: 1.2s;
+
+}
+
+/* 마우스 휠 animation */
+@keyframes mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+
+/* 화살표 animation */
+
+@keyframes aw {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* business1 */
+#business1 {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+}
+
+#business1 .business1_main_img {
+  background: url(../img/business1_main.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#business1 .business1_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.business1_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.business1_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.business1_caption h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* business1-1 */
+.business1-1 h3{
+  font-size: 40px;
+}
+
+.business1-1 span{
+  display: block;
+  width: 3px;
+  height: 50px;
+  background-color: #222;
+  margin: 20px auto;
+  margin-bottom: 80px;
+}
+.business1-1 h4{
+  font-size: 32px;
+  margin-bottom: 20px;
+  line-height: 50px;
+}
+.business1-1 h4 strong{
+  color: #F7701E;
+}
+
+.business1-1 .sub_title{
+  font-size: 18px;
+}
+
+/* 갤려리 */
+#business1_gallery {
+	width: 1200px;
+	height: 700px;
+	margin: 50px 0;
+	box-shadow: 0 4px 10px #333;
+	position: relative;
+	overflow: hidden;
+  border-radius: 0 30px 0 30px;
+  overflow: hidden;
+}
+#business1_largeImg {
+	display: flex;
+	position: absolute;
+
+}
+#business1_largeImg img{
+  width: 1200px;
+  height: 700px;
+  object-fit:cover 
+}
+.business1_thumbs {
+	position: absolute;
+  width: 1200px;
+	left:8%;
+	bottom: 20px;
+  box-sizing: border-box;
+}
+.business1_thumbs a {
+	display: inline-block;
+  border-radius: 0 10px 0 10px;
+  width: 150px;
+  height: 80px;
+  margin-left: 11px;
+  overflow: hidden;
+}
+.business1_thumbs a.on{
+	background: #333;
+	color: #fff;
+}
+
+.business1_thumbs a img{
+  width: 150px;
+  height: 80px;
+  object-fit:cover;
+  filter: brightness(80%);
+  transition: 0.35s;
+}
+.business1_thumbs a:hover img{filter: brightness(50%);}
+
+
+/* _______business1-2_________ */
+.business1-2{
+  width: 100%;
+  height: 1500px;
+}
+
+
+.tab {
+  display: flex;
+  justify-content: center;
+}
+
+.tab li {
+  color: #F7701E;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  border-radius: 0 10px 0 10px;
+  width: 100px;
+  height: 40px;
+  padding: 0 5px;
+  cursor: pointer;
+  border: 1px solid #F7701E;
+  margin-right: 10px;
+  padding: 3px 5px;
+}
+
+.tab li.active {
+  display: block;
+  width: 100px;
+  height: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  background-color: #F7701E;
+  color: white;
+}
+
+.tabContents {
+  clear: both;
+  margin-top: 100px;
+  width: 1300px;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.tabContents div ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tabContents div ul li{
+  margin-right: 30px;
+}
+
+.tabContents .tab_sub{display: none;}
+.tabContents div.active{display: block;}
+
+
+.business1-2_building ul{width: 1300px;}
+
+.business1-2_building {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  border-radius: 10px 10px 0 0 ;
+  color: #eee;
+  text-align: left;
+  font-size: 16px;
+  width: 300px;
+  height: 300px;
+}
+.business1-2_building * {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+.business1-2_building img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.business1-2_building figcaption {
+  position: absolute;
+  top: 77%;
+  width: 100%;
+  height: 280px;
+  background-color: rgba(227, 92, 10, 0.85);
+  padding: 15px 25px 65px;
+}
+
+/* text */
+
+.business1-2_building h3 {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 20px;
+}
+.business1-2_building p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+.business1-2_building a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.business1-2_building:hover figcaption,
+.business1-2_building.hover figcaption {/*호버 */
+  top: 50px;
+}
+
+
+/* business2 */
+#business2 {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+}
+
+#business2 .business2_main_img {
+  background: url(../img/business2_main.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#business2 .business2_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.business2_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.business2_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.business2_caption h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.business2-2{
+  width: 100%;
+  height: 1700px;
+}
+
+.business1-2_building .long_text{
+  font-size: 19px;
+  margin-bottom: 23px;
+}
+.business1-2_building .long_text2{
+  font-size: 19px;
+  margin-top: 0;
+  transform: translateY(-5px);
+}
+
+/* business3 */
+#business3 {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  top: 0%;
+}
+
+#business3 .business3_main_img {
+  background: url(../img/business3_main.jpg) no-repeat top center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+}
+
+#business3 .business3_main_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: -11;
+}
+
+.business3_caption {
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+
+.business3_caption h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  padding-top: 150px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.business3_caption h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.business3-2{
+  width: 100%;
+  height: 1700px;
+}
+
+.business3-2_building .long_text{
+  font-size: 19px;
+  margin-bottom: 23px;
+}
+.business3-2_building .long_text2{
+  font-size: 19px;
+  margin-top: 0;
+  transform: translateY(-5px);
+}
+
